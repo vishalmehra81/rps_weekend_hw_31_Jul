@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+ 
+    <h1>ROCK PAPER SCISSORS</h1>
+    <h2>Let's Play !!!</h2>
+
+    <form action="add-player" method="post">
+      <label for="player_1">player_name_1</label>
+      <input type="text" name="player_1">
+      <label for="choice_player_1">Rock/Paper/Scissors</label>
+      <input type="text" name="choice_player_1">
+      <label for="player_2">player_name_1</label>
+      <input type="text" name="player_2">
+      <label for="choice_player_2">Rock/Paper/Scissors</label>
+      <input type="text" name="choice_player_2">
+      <input type="submit">
+    </form>
+
+    
+    {% while (true): %}
+    {{players.player_1}}
+    {{players.player_2}}
+    {{players.choice_player_1}}
+    {{players.choice_player_2}}
+
+    {%if players.choice_player_1 == "Rock" and players.choice_player_2 == "Scissors"%}
+       <output>name="Player 1 wins with Rock"</output>
+        {%elif players.choice_player_1 == "Scissors" and players.choice_player_2 == "Paper"%}
+            <output>name="Player 1 wins with Scissors"</output>}
+        {%elif players.choice_player_1 == "Paper" and players.choice_player_2 == "Rock"%}
+            <output>name="Player 1 wins with Paper"</output>}
+        {%elif players.choice_player_1 == "Scissors" and players.choice_player_2 == "Paper"%elif}
+            <output>name="Player 1 wins with Scissors"</output>}
+        {elif players.choice_player_1 == players.choice_player_2%}
+            <output>name="Tie"</output>
+
+    {% endwhile %}
+{% endblock %}
